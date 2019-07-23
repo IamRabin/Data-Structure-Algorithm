@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -I ../Heap -I .
+CXXFLAGS = -std=c++11 -Wall -Wextra -I ../Ex-4_Heap -I .
 
 COMPARISON_TARGET = comparison_sort.x
 COMPARISON_SOURCE = comparison_sort.cc
@@ -38,6 +38,6 @@ $(SELECT_TARGET): $(SELECT_SOURCE)
 clean:
 	rm $(COMPARISON_TARGET) $(BUCKET_TARGET) $(SELECT_TARGET) $(COUNT_TARGET) $(RADIX_TARGET)
 
-comparison_sort.cc: ../Heap/heap.h
+comparison_sort.cc: ../Ex-4_Heap/heap.h
 select.cc: ./sort_routine.h
 bucket_sort.cc: ./sort_routine.h

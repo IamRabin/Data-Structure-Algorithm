@@ -7,41 +7,7 @@
 #include "sort_routine.h"
 #define MAX_VALUE 25
 
-/**
- *
-  * Dichotomic search. Takes the length of array 'A', 'high', and a candidate element
-  * 'a'. Returns the index position of a in A, -1 if not found
-  */
-// template<class T>
-// int di_find(T* A, const T e, int len) {
-//     // 'high' will be the right index and 'low' the left one
-//     int low{0};
-//     int m{};
-//     // as long as we consider a non-negative length portion
-//     while (high >= low) {
-//         // let 'm' be the midpoint
-//         m = (low + high) / 2;
-//         // if A[m] is the candidate, return
-//         if (A[m] == a) {
-//             return m;
-//         }
-//         // if the candidate is smaller, continue search to the right of m
-//         else if (A[m] < a) {
-//             low = m + 1;
-//         }
-//         // else continue search to the left of m
-//         else {
-//             high = m - 1;
-//         }
-//     }
-//     // not found
-//     return -1;
-// }
 
-/**
- * This function implements quick sort with lower and upper index and pointer to function that selects pivot.
-  * 'func'  returns the lower index of the subarrray
-  */
 template<class T>
 void quicksort(T* A, int low, int high, int (*func)(const int, const int)=[](const int low, const int high) {(void)high; return low;}) {
     // as long as the current subarray has length > 1
